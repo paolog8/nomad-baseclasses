@@ -29,35 +29,42 @@ class PLIproperties(ArchiveSection):
         a_eln=dict(component='StringEditQuantity'))
 
     integration_time = Quantity(
+        links=['https://purl.archive.org/tfsco/TFSCO_00002076','https://purl.archive.org/tfsco/TFSCO_00002093'],
         type=np.dtype(np.float64),
         unit=('s'),
         a_eln=dict(component='NumberEditQuantity', defaultDisplayUnit='ms'))
 
     excitation_wavelength = Quantity(
+        links=['https://purl.archive.org/tfsco/TFSCO/TFSCO_00003108','https://purl.archive.org/tfsco/TFSCO/TFSCO_00003114'],
         type=np.dtype(np.float64),
         unit=('nm'),
         a_eln=dict(component='NumberEditQuantity', defaultDisplayUnit='nm'))
 
     excitation_current = Quantity(
+        links=['https://purl.archive.org/tfsco/TFSCO/TFSCO_00003105','https://purl.archive.org/tfsco/TFSCO/TFSCO_00003112'],
         type=np.dtype(np.float64),
         unit=('A'),
         a_eln=dict(component='NumberEditQuantity', defaultDisplayUnit='mA'))
 
     light_intensity = Quantity(
+        links=['https://purl.archive.org/tfsco/TFSCO_00002034'],
         type=np.dtype(np.float64),
         unit=('W/m^2'),
         a_eln=dict(component='NumberEditQuantity', defaultDisplayUnit='mW/cm^2'))
 
     number_of_averages = Quantity(
+        links=['https://purl.archive.org/tfsco/TFSCO/TFSCO_00003100'],
         type=np.dtype(np.int64),
         a_eln=dict(component='NumberEditQuantity'))
 
     long_pass_filter = Quantity(
+        links=['http://purl.obolibrary.org/obo/RO_0000057'],
         type=str,
         shape=["*"],
         a_eln=dict(component='StringEditQuantity'))
 
     image_pixel_length = Quantity(
+        links=['https://purl.archive.org/tfsco/TFSCO/TFSCO_00003100'],
         type=np.dtype(np.float64),
         unit=('um'),
         a_eln=dict(component='NumberEditQuantity', defaultDisplayUnit='um'))
@@ -67,6 +74,7 @@ class PLImaging(BaseMeasurement):
     '''PL Imaging'''
 
     m_def = Section(
+        links=['https://purl.archive.org/tfsco/TFSCO_00001035'],
         a_eln=dict(hide=['certified_values', 'certification_institute']))
 
     data_file = Quantity(
