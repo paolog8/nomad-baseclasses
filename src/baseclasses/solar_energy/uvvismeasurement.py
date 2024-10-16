@@ -39,7 +39,7 @@ class UVvisDataSimple(ArchiveSection):
         type=str)
 
     intensity = Quantity(
-        links=['https://purl.archive.org/tfsco/TFSCO_00001128'],
+        links=['https://purl.archive.org/tfsco/TFSCO_00001129','https://purl.archive.org/tfsco/TFSCO_00002034'],
         type=np.dtype(
             np.float64), shape=['*'])
 
